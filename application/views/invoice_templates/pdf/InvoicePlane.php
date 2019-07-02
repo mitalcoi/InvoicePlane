@@ -175,6 +175,13 @@
             </td>
             <td class="text-right"><?php echo format_currency($invoice->invoice_item_subtotal); ?></td>
         </tr>
+            
+        <tr>
+             <td colspan="4"></td>
+             <td class="text-right">Cashing fee:</td>
+             <?php $fee = $invoice->invoice_item_subtotal * 0.035; ?>
+             <td class="amount"><?php echo format_currency($invoice->invoice_item_subtotal + $fee); ?></td>
+        </tr>
 
         <?php if ($invoice->invoice_item_tax_total > 0) { ?>
             <tr>
