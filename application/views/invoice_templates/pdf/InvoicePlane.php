@@ -231,7 +231,7 @@
                 <b><?php _trans('total'); ?></b>
             </td>
             <td class="text-right">
-                <b><?php echo format_currency($invoice->invoice_total); ?></b>
+                <b><?php echo format_currency($invoice->invoice_total + $fee); ?></b>
             </td>
         </tr>
         <tr>
@@ -247,7 +247,7 @@
                 <b><?php _trans('balance'); ?></b>
             </td>
             <td class="text-right">
-                <b><?php echo format_currency($invoice->invoice_balance); ?></b>
+                <b><?php echo format_currency($invoice->invoice_balance + $fee); ?></b>
             </td>
         </tr>
         </tbody>
